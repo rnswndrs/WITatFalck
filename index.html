@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women in Tech at Falck</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Mark OT Book', 'Mark OT', Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #fff5f7 0%, #fce4ec 30%, #fff0f3 60%, #fdf2f4 100%);
+    color: #121A44;
+    min-height: 100vh;
+  }
+
+  /* Falck Brand Bar */
+  .brand-bar {
+    background: #FFFFFF;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #FF1E2D;
+  }
+
+  .brand-bar .falck-logo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .brand-bar .falck-logo img {
+    height: 36px;
+    width: auto;
+  }
+
+  .brand-bar .tagline {
+    font-family: 'Mark OT Book', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 0.78rem;
+    color: #121A44;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* Container */
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 28px 80px;
+  }
+
+  .bow {
+    font-size: 1.4rem;
+    display: inline-block;
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .hero .bows {
+    font-size: 2rem;
+    letter-spacing: 12px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-family: 'Mark OT Heavy', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 2.4rem;
+    color: #121A44;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .hero .at-falck {
+    font-family: 'Mark OT Medium', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #FF1E2D;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #FF1E2D, #f3d1da);
+    margin: 40px auto;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section h2 {
+    font-family: 'Mark OT Heavy', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #121A44;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section p {
+    font-family: 'Mark OT Book', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #415565;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+    margin-top: 8px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(180deg, #FF1E2D, #f3d1da);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    background: #FF1E2D;
+    border-radius: 50%;
+    border: 2px solid #fff5f7;
+  }
+
+  .timeline-item .date {
+    font-family: 'Mark OT Bold', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #FF1E2D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+
+  .timeline-item .desc {
+    font-family: 'Mark OT Book', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #415565;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    margin-top: 56px;
+  }
+
+  .cta p {
+    font-family: 'Mark OT Medium', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #121A44;
+    margin-bottom: 22px;
+  }
+
+  .cta a {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #EB0010;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Mark OT Bold', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 18px rgba(255, 30, 45, 0.2);
+  }
+
+  .cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(255, 30, 45, 0.3);
+    background: #66182A;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 64px;
+    font-family: 'Mark OT Book', 'Mark OT', Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    color: #D1D4D3;
+    letter-spacing: 3px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Falck Brand Bar -->
+<div class="brand-bar">
+  <div class="falck-logo">
+    <img src="falck-logo.png" alt="Falck">
+  </div>
+  <span class="tagline">Women in Tech</span>
+</div>
+
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="bows">🎀 🎀 🎀</div>
+    <h1>Women in Tech</h1>
+    <div class="at-falck">at Falck</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Who We Are -->
+  <div class="section">
+    <h2><span class="bow">🎀</span> Who We Are</h2>
+    <p>
+      We're a community of women across Falck who work in technology — developers, analysts, project managers, designers, and everyone in between. We come together to support each other, share knowledge, and make tech at Falck a place where women thrive.
+    </p>
+  </div>
+
+  <!-- Our Purpose -->
+  <div class="section">
+    <h2><span class="bow">🎀</span> Our Purpose</h2>
+    <p>
+      To create a welcoming space where women in tech can connect, grow, and inspire one another. We believe that diverse perspectives build better technology, and we're here to champion visibility, mentorship, and belonging within Falck's tech community.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Timeline -->
+  <div class="section">
+    <h2><span class="bow">🎀</span> Our Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="date">December 2025</div>
+        <div class="desc">The idea takes shape — a few passionate colleagues start the conversation about creating a community for women in tech at Falck.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">Early 2026</div>
+        <div class="desc">Women in Tech at Falck is officially launched. Our Teams group chat goes live and the first members join.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2026 — Present</div>
+        <div class="desc">Growing our network, hosting conversations, sharing opportunities, and building a stronger, more connected community every day.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">The Future</div>
+        <div class="desc">Events, mentorship, knowledge-sharing sessions, and a louder voice for women in tech across all of Falck.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Join Us -->
+  <div class="cta">
+    <p>Curious? Come say hi.</p>
+    <a href="https://teams.microsoft.com/l/chat/19:fea58c14ebab4ff59595311902be2a08@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D" target="_blank" rel="noopener">
+      Join us on Teams
+    </a>
+  </div>
+
+  <div class="footer">🎀 &nbsp; W I T &nbsp; @ &nbsp; F A L C K &nbsp; 🎀</div>
+
+</div>
+
+</body>
+</html>
